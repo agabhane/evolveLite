@@ -1,0 +1,15 @@
+<ion-view view-title="Login" class="login">
+  <ion-content>
+  	<div class="logo"></div>
+    <div class="login-wrapper">
+		<label class="item item-input">
+			<input type="email" placeholder="Username" ng-model="loginData.username">
+		</label>
+		<label class="item item-input">
+			<input type="password" placeholder="Password" ng-model="loginData.password">
+		</label>
+		<button class="button button-block button-positive button-login" ng-click="doLogin()" ng-disabled="loggingIn"><ion-spinner icon="android"></ion-spinner>Login</button>
+		<div class="login-error error-msg" ng-show="loginError && !loggingIn">{{loginError}}</div>
+	</div>
+  </ion-content>
+</ion-view>
